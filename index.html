@@ -43,13 +43,19 @@
 
 <!-- ===========================================================
      HEADER FIJO
-     PARA EDITAR: links del menú, logo en assets/logo-ig.png
+     LOGO: assets/logo-ig.png (mark redondo) + wordmark en HTML
+     usando Barlow Condensed. Si más adelante hay un SVG de la
+     lockup oficial, reemplazar el <img class="brand-mark"> por
+     el <svg> y borrar el wordmark de texto.
      =========================================================== -->
 <header class="site-header" id="siteHeader">
   <div class="container">
-    <a href="#inicio" class="brand">
-      <!-- LOGO: assets/logo-ig.png -> reemplazar por SVG si se tiene -->
-      <img src="assets/wallpaper-negro.png" alt="Battezzati Materiales Eléctricos" style="height:56px;object-fit:contain;object-position:left;">
+    <a href="#inicio" class="brand" aria-label="Battezzati Materiales Eléctricos · Inicio">
+      <img src="assets/logo-ig.png" alt="" aria-hidden="true" class="brand-mark">
+      <span class="brand-wordmark">
+        <span class="brand-name">Battezzati</span>
+        <span class="brand-tagline">Materiales Eléctricos</span>
+      </span>
     </a>
 
     <nav class="nav-main" aria-label="Principal">
@@ -663,7 +669,13 @@
   <div class="container">
     <div class="footer-grid">
       <div class="brand-block">
-        <img src="assets/wallpaper-negro.png" alt="Battezzati" style="object-fit:contain;object-position:left;">
+        <a href="#inicio" class="brand brand-footer" aria-label="Battezzati Materiales Eléctricos · Inicio">
+          <img src="assets/logo-ig.png" alt="" aria-hidden="true" class="brand-mark">
+          <span class="brand-wordmark">
+            <span class="brand-name">Battezzati</span>
+            <span class="brand-tagline">Materiales Eléctricos</span>
+          </span>
+        </a>
         <p>Materiales eléctricos al por mayor y por menor. Marcas líderes, stock permanente y atención profesional para electricistas, comercios y obras.</p>
         <div class="socials">
           <a href="https://instagram.com/battezzati.mei" target="_blank" rel="noopener" aria-label="Instagram">
