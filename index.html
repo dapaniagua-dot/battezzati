@@ -142,13 +142,16 @@
     </div>
   </div>
 
-  <!-- Stats strip amarillo -->
+  <!-- Stats strip amarillo
+       data-count: numero a animar
+       data-suffix: que va despues ('+', '%', '' para nada).
+       data-format: 'es-AR' aplica thousands separator (1.200) -->
   <div class="hero-stats">
     <div class="container">
-      <div class="stat"><div class="num" data-count="15">0</div><div class="lbl">Marcas<br>líderes</div></div>
-      <div class="stat"><div class="num" data-count="1200">0</div><div class="lbl">Productos<br>en stock</div></div>
-      <div class="stat"><div class="num" data-count="98">0</div><div class="lbl">% Pedidos<br>en 24 hs</div></div>
-      <div class="stat"><div class="num" data-count="2">0</div><div class="lbl">Canales:<br>mayor + minor</div></div>
+      <div class="stat"><div class="num" data-count="15" data-suffix="+">0</div><div class="lbl">Marcas<br>líderes</div></div>
+      <div class="stat"><div class="num" data-count="1200" data-suffix="+" data-format="es-AR">0</div><div class="lbl">Productos<br>en stock</div></div>
+      <div class="stat"><div class="num" data-count="98" data-suffix="%">0</div><div class="lbl">Pedidos<br>en 24 hs</div></div>
+      <div class="stat"><div class="num" data-count="2" data-suffix="">0</div><div class="lbl">Canales<br>mayor + minor</div></div>
     </div>
   </div>
 </section>
@@ -832,16 +835,20 @@ document.querySelectorAll('.reveal').forEach(el => {
 
 /* --------------------------------------------------------------
    5. Stats animados (count-up cuando entran en viewport)
+   El sufijo y el formato vienen del HTML via data-suffix / data-format,
+   no se infieren del numero (asi "15+", "98%" y "1.200+" son explicitos).
    -------------------------------------------------------------- */
-function animateCount(el, target) {
+function animateCount(el) {
+  const num = parseInt(el.dataset.count, 10);
+  const suffix = el.dataset.suffix ?? '';
+  const format = el.dataset.format;
   const dur = 1400, start = performance.now();
-  const isPct = String(target).endsWith('%');
-  const num = parseInt(target, 10);
   function tick(t) {
     const p = Math.min(1, (t - start) / dur);
     const eased = 1 - Math.pow(1 - p, 3);
     const v = Math.round(num * eased);
-    el.textContent = (num >= 1000 ? v.toLocaleString('es-AR') : v) + (isPct ? '%' : (num >= 100 && num < 1000 ? '+' : ''));
+    const display = format ? v.toLocaleString(format) : String(v);
+    el.textContent = display + suffix;
     if (p < 1) requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);
@@ -849,12 +856,11 @@ function animateCount(el, target) {
 const statsObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      const target = e.target.dataset.count;
-      animateCount(e.target, target);
+      animateCount(e.target);
       statsObserver.unobserve(e.target);
     }
   });
-}, { threshold: 0.5 });
+}, { threshold: 0.3 });
 document.querySelectorAll('[data-count]').forEach(el => statsObserver.observe(el));
 
 /* --------------------------------------------------------------
