@@ -250,6 +250,7 @@ ul { list-style: none; }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: filter .3s ease;
   /* Glow amarillo: la lampita "se enciende" 2 veces al cargar la pagina
      y se queda quieta. */
   animation: lamp-glow 1.6s ease-in-out 2;
@@ -274,7 +275,9 @@ ul { list-style: none; }
   font-size: 34px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--white);
+  /* Reposo en amarillo de marca, hover en blanco — invertido respecto
+     al patron clasico para darle mas presencia al nombre del cliente. */
+  color: var(--yellow);
   line-height: 1;
   transition: color .2s ease;
 }
@@ -287,7 +290,13 @@ ul { list-style: none; }
   color: var(--gray-200);
   line-height: 1;
 }
-.brand:hover .brand-name { color: var(--yellow); }
+.brand:hover .brand-name { color: var(--white); }
+/* Hover en la lockup: la lampita "se enciende" mientras el mouse esta
+   encima (drop-shadow estatico, no animado para no marear). */
+.brand:hover .brand-mark {
+  filter: drop-shadow(0 0 12px rgba(255,214,10,.85))
+          drop-shadow(0 0 24px rgba(255,214,10,.45));
+}
 
 .brand-footer .brand-mark { height: 68px; width: 68px; }
 .brand-footer .brand-name { font-size: 38px; }
