@@ -13,6 +13,7 @@
    ============================================================ */
 
 :root {
+  /* Marca */
   --black: #0A0A0A;
   --black-2: #141414;
   --black-3: #1F1F1F;
@@ -20,12 +21,27 @@
   --yellow-2: #F4C300;     /* hover / pressed */
   --yellow-soft: #FFF4B8;  /* highlights muy suaves */
   --white: #FFFFFF;
+
+  /* Grises sobre fondo claro (texto, separadores) */
   --gray-50: #F7F7F7;
   --gray-100: #ECECEC;
   --gray-200: #D9D9D9;
+  --gray-300: #B8B8B8;
   --gray-400: #8A8A8A;
+  --gray-500: #6B6B6B;     /* nuevo: cumple WCAG AA sobre blanco */
   --gray-600: #4A4A4A;
   --gray-800: #1A1A1A;
+
+  /* Bordes y superficies sobre fondo negro */
+  --border-dark: #222;
+  --border-dark-strong: #333;
+  --surface-dark: #161616;     /* input focus background */
+  --surface-dark-2: #1a1a1a;   /* drawer separators */
+  --border-faint: #2a2a2a;     /* hairline en cards oscuras */
+
+  /* Estados / utilidades */
+  --success: #22C55E;
+  --whatsapp: #25D366;
 
   /* Tipografía */
   --font-display: "Barlow Condensed", "Oswald", "Arial Narrow", sans-serif;
@@ -34,7 +50,7 @@
   /* Layout */
   --container: 1280px;
   --radius: 4px;
-  --radius-lg: 8px;
+  --radius-lg: 6px;        /* unifico el 6/8: el sitio usa mayoritariamente 6px */
   --header-h: 84px;
 
   /* Sombras */
@@ -130,7 +146,7 @@ ul { list-style: none; }
   color: var(--gray-200);
   font-size: 12.5px;
   letter-spacing: 0.04em;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--border-dark);
 }
 .top-strip .container {
   display: flex;
@@ -149,7 +165,7 @@ ul { list-style: none; }
   top: 0;
   z-index: 100;
   background: var(--black);
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--border-dark);
   transition: box-shadow .2s ease;
 }
 .site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.4); }
@@ -390,7 +406,7 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background: var(--black-2);
-  border: 1px solid #2a2a2a;
+  border: 1px solid var(--border-faint);
   border-radius: 6px;
   overflow: hidden;
   /* Foto del local: panoramica (~2.65:1) sobre frame 4/5 vertical.
@@ -777,7 +793,7 @@ section.dark .section-head .right { color: var(--gray-200); }
 .field select {
   width: 100%;
   background: var(--black-3);
-  border: 1px solid #333;
+  border: 1px solid var(--border-dark-strong);
   border-radius: 4px;
   color: var(--white);
   padding: 12px 14px;
@@ -790,7 +806,7 @@ section.dark .section-head .right { color: var(--gray-200); }
 .field select:focus {
   outline: none;
   border-color: var(--yellow);
-  background: #161616;
+  background: var(--surface-dark);
 }
 .field textarea { resize: vertical; min-height: 96px; }
 .client-type {
@@ -804,7 +820,7 @@ section.dark .section-head .right { color: var(--gray-200); }
   align-items: center;
   gap: 8px;
   background: var(--black-3);
-  border: 1px solid #333;
+  border: 1px solid var(--border-dark-strong);
   padding: 12px 14px;
   border-radius: 4px;
   cursor: pointer;
@@ -839,7 +855,7 @@ section.dark .section-head .right { color: var(--gray-200); }
 }
 
 .file-drop {
-  border: 1.5px dashed #444;
+  border: 1.5px dashed var(--gray-600);
   border-radius: 4px;
   padding: 14px;
   text-align: center;
@@ -1067,7 +1083,7 @@ footer {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
   padding-bottom: 56px;
-  border-bottom: 1px solid #1f1f1f;
+  border-bottom: 1px solid var(--black-3);
 }
 footer .brand-block p { font-size: 14px; max-width: 320px; line-height: 1.6; color: var(--gray-400); }
 footer .footer-col h4 {
@@ -1088,7 +1104,7 @@ footer .socials {
 }
 footer .socials a {
   width: 40px; height: 40px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid var(--border-faint);
   border-radius: 4px;
   display: flex; align-items: center; justify-content: center;
   color: var(--white);
@@ -1136,7 +1152,7 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   position: fixed;
   right: 24px; bottom: 24px;
   z-index: 90;
-  background: #25D366;
+  background: var(--whatsapp);
   color: white;
   width: 56px; height: 56px;
   border-radius: 50%;
@@ -1164,7 +1180,7 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: #25D366;
+  background: var(--whatsapp);
   z-index: -1;
   animation: ripple 2.2s ease-out 3;
 }
@@ -1240,7 +1256,7 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   top: var(--header-h);
   left: 0; right: 0;
   background: var(--black);
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--border-dark);
   transform: translateY(-110%);
   transition: transform .3s ease;
   z-index: 99;
@@ -1256,7 +1272,7 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--white);
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid var(--surface-dark-2);
 }
 .mobile-drawer a:hover { color: var(--yellow); }
 .mobile-drawer .btn { width: 100%; margin-top: 16px; }
