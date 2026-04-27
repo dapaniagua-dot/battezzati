@@ -118,9 +118,11 @@ Commits chicos, en español:
 - [ ] Datos finales de contacto, mapa real.
 
 ### SEO y meta
-- [ ] Meta tags + Open Graph.
-- [ ] Favicon.
-- [ ] `sitemap.xml` y `robots.txt`.
+- [x] Meta tags + Open Graph + Twitter Card + theme-color + canonical.
+- [x] Favicon (usando `assets/logo-ig.png` como fallback simple).
+- [x] `sitemap.xml` y `robots.txt`.
+- [ ] Cuando se conecte dominio custom: buscar/reemplazar `battezzati-production.up.railway.app` en `index.html`, `sitemap.xml` y `robots.txt`.
+- [ ] Generar set completo de favicons con realfavicongenerator.net (16/32/180/192/512) cuando haya tiempo.
 
 ---
 

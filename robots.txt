@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://battezzati-production.up.railway.app/sitemap.xml

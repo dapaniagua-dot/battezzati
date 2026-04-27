@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap del sitio Battezzati Materiales Electricos.
+  Sitio one-page: una sola URL canonica, las secciones se navegan con
+  fragments (#empresa, #catalogos, etc.) que Google no indexa por separado.
+
+  CUANDO SE CONECTE DOMINIO CUSTOM:
+  buscar y reemplazar "battezzati-production.up.railway.app" en:
+  - sitemap.xml (este archivo)
+  - robots.txt
+  - index.html (canonical, og:url, og:image, twitter:image)
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://battezzati-production.up.railway.app/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
