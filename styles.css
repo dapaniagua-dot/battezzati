@@ -237,16 +237,25 @@ ul { list-style: none; }
   line-height: 1;
 }
 .brand-mark {
+  /* Wrapper redondo que recorta el PNG (que tiene esquinas blancas
+     cuadradas) a circulo perfecto. El <img> adentro llena el wrapper
+     al 100%. Este patron es mas robusto que border-radius en <img>
+     directo, que puede renderizarse distinto entre browsers mobile. */
+  display: inline-block;
   height: 48px;
   width: 48px;
   flex-shrink: 0;
-  display: block;
-  /* El PNG tiene esquinas blancas (no transparentes); el border-radius
-     recorta el cuadrado al circulo del logo y elimina el halo. */
   border-radius: 50%;
+  overflow: hidden;
   /* Glow amarillo: la lampita "se enciende" 2 veces al cargar la pagina
-     y se queda quieta. Sin filter por default para no costar paint extra. */
+     y se queda quieta. */
   animation: lamp-glow 1.6s ease-in-out 2;
+}
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @keyframes lamp-glow {
   0%, 100% {
