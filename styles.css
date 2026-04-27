@@ -172,6 +172,23 @@ ul { list-style: none; }
   width: 48px;
   flex-shrink: 0;
   display: block;
+  /* El PNG tiene esquinas blancas (no transparentes); el border-radius
+     recorta el cuadrado al circulo del logo y elimina el halo. */
+  border-radius: 50%;
+  /* Glow amarillo: la lampita "se enciende" 2 veces al cargar la pagina
+     y se queda quieta. Sin filter por default para no costar paint extra. */
+  animation: lamp-glow 1.6s ease-in-out 2;
+}
+@keyframes lamp-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 transparent);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255,214,10,.85))
+            drop-shadow(0 0 20px rgba(255,214,10,.45));
+    transform: scale(1.04);
+  }
 }
 .brand-wordmark {
   display: flex;
