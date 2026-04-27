@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Battezzati — Materiales Eléctricos</title>
+<meta name="description" content="Battezzati Materiales Eléctricos. Venta mayorista y minorista. Stock permanente, marcas líderes, atención profesional.">
+
+<!-- ============================================================
+     TIPOGRAFÍAS (Barlow + Barlow Condensed = familia industrial,
+     similar al logo, soporta tildes y ñ correctamente)
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===========================================================
+     TOP STRIP — info útil arriba del header
+     PARA EDITAR: cambiar horarios, teléfonos y email aquí
+     =========================================================== -->
+<div class="top-strip">
+  <div class="container">
+    <div class="strip-left">
+      <span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Lun a Vie 8 a 17 · Sáb 9 a 13
+      </span>
+      <span class="hide-sm">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 8l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+        battezzatimei@gmail.com
+      </span>
+    </div>
+    <div class="strip-right">
+      <a href="tel:+541154328957">📞 (011) 5432-8957</a>
+      <a href="https://wa.me/5491162296842" target="_blank" rel="noopener">WhatsApp 11 6229-6842</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===========================================================
+     HEADER FIJO
+     PARA EDITAR: links del menú, logo en assets/logo-ig.png
+     =========================================================== -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="#inicio" class="brand">
+      <!-- LOGO: assets/logo-ig.png -> reemplazar por SVG si se tiene -->
+      <img src="assets/wallpaper-negro.png" alt="Battezzati Materiales Eléctricos" style="height:56px;object-fit:contain;object-position:left;">
+    </a>
+
+    <nav class="nav-main" aria-label="Principal">
+      <a href="#inicio" class="active">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#catalogos">Catálogos</a>
+      <a href="#mayoristas">Mayoristas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="#presupuesto" class="btn btn-primary">Pedí tu presupuesto</a>
+      <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Drawer mobile -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#marcas">Marcas</a>
+    <a href="#catalogos">Catálogos</a>
+    <a href="#mayoristas">Mayoristas</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#presupuesto" class="btn btn-primary">Pedí tu presupuesto</a>
+  </div>
+</header>
+
+<!-- ===========================================================
+     1. HERO
+     =========================================================== -->
+<section class="hero" id="inicio" style="padding:0;">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <div class="hero-eyebrow-row">
+          <span class="pill"><span class="dot"></span>Stock permanente</span>
+          <span style="font-family:var(--font-display);font-size:12px;letter-spacing:.18em;color:var(--gray-200);text-transform:uppercase;">Mayorista · Minorista</span>
+        </div>
+        <h1>
+          Materiales eléctricos
+          <span class="accent">que potencian tu obra.</span>
+        </h1>
+        <p class="lead">
+          Más de mil productos en stock, marcas líderes del rubro y atención
+          profesional para electricistas, instaladores, comercios y obras
+          particulares. Mayorista y minorista — un solo proveedor.
+        </p>
+
+        <div class="hero-channels">
+          <div class="channel-card">
+            <div class="label">Mayorista</div>
+            <div class="desc">Lista de precios, cuenta corriente y logística para tu comercio o empresa.</div>
+          </div>
+          <div class="channel-card">
+            <div class="label">Minorista</div>
+            <div class="desc">Atención al instalador y al particular en local y a distancia.</div>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#catalogos" class="btn btn-primary btn-arrow">
+            Ver catálogos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#presupuesto" class="btn btn-outline-light">Solicitar presupuesto</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="frame"></div>
+        <div class="badge">
+          <div class="left">
+            <div class="small">Sucursal</div>
+            <div class="big">Showroom Battezzati</div>
+          </div>
+          <div class="ticker">+1.200 productos en stock</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats strip amarillo -->
+  <div class="hero-stats">
+    <div class="container">
+      <div class="stat"><div class="num" data-count="15">0</div><div class="lbl">Marcas<br>líderes</div></div>
+      <div class="stat"><div class="num" data-count="1200">0</div><div class="lbl">Productos<br>en stock</div></div>
+      <div class="stat"><div class="num" data-count="98">0</div><div class="lbl">% Pedidos<br>en 24 hs</div></div>
+      <div class="stat"><div class="num" data-count="2">0</div><div class="lbl">Canales:<br>mayor + minor</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     2. POR QUÉ ELEGIRNOS
+     =========================================================== -->
+<section class="why" id="productos">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow dark">Por qué elegirnos</span>
+        <h2>Una marca <span class="y">seria</span><br>que vende mucho.</h2>
+      </div>
+      <div class="right">
+        Stock real, logística propia y cuatro pilares con los que trabajamos
+        todos los días para que la obra no se frene.
+      </div>
+    </div>
+
+    <div class="why-grid">
+      <!-- 01 -->
+      <div class="why-card reveal">
+        <div class="num">01 / Stock</div>
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        </div>
+        <h3>Stock permanente</h3>
+        <p>Reposición semanal de todas las líneas. Si está en el catálogo, está listo para retirar.</p>
+      </div>
+      <!-- 02 -->
+      <div class="why-card reveal" style="transition-delay:.05s;">
+        <div class="num">02 / Atención</div>
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 19c.7-3.3 3.4-5.5 6.5-5.5s5.8 2.2 6.5 5.5"/><circle cx="17.5" cy="6.5" r="2.5"/><path d="M21 14.5c-.5-1.8-2-3-3.5-3"/></svg>
+        </div>
+        <h3>Mayorista y minorista</h3>
+        <p>Dos canales con precios y condiciones diferenciadas. Cuenta corriente disponible para clientes habituales.</p>
+      </div>
+      <!-- 03 -->
+      <div class="why-card reveal" style="transition-delay:.1s;">
+        <div class="num">03 / Marcas</div>
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <h3>Marcas líderes</h3>
+        <p>Distribuidores oficiales de Cambre, Leuk, Trefilcon, Commax, Teclastar y más. Garantía de fábrica.</p>
+      </div>
+      <!-- 04 -->
+      <div class="why-card reveal" style="transition-delay:.15s;">
+        <div class="num">04 / Logística</div>
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+        </div>
+        <h3>Envíos y retiros</h3>
+        <p>Envíos a todo el país, retiro en sucursal o entrega coordinada en obra. Pedidos del día listos en 24 hs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     3. MARCAS QUE TRABAJAMOS
+     PARA EDITAR: reemplazar el span .brand-name por <img> con
+     el logo real cuando lo tengas. Mantener aspect-ratio 16/9.
+     =========================================================== -->
+<section class="brands" id="marcas">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow dark">Marcas que trabajamos</span>
+        <h2>Distribuidores <span class="y">oficiales.</span></h2>
+      </div>
+      <div class="right">
+        Trabajamos directamente con las marcas más reconocidas del mercado
+        eléctrico argentino. Productos certificados y respaldo de fábrica.
+      </div>
+    </div>
+
+    <div class="brand-grid">
+      <!-- Cada celda: reemplazar <span class="brand-name"> por <img src="assets/marcas/cambre.svg"> -->
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Cambre</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Leuk</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Trefi</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Commax</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Teclastar</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Macroled</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Sica</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Genrod</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">Plástica Bertolino</span></div>
+      <div class="brand-cell"><span class="placeholder-tag">Logo</span><span class="brand-name">+ otras</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     4. CATÁLOGOS
+     PARA EDITAR: cada <a class="ver"> apunta a un PDF/link real.
+     Reemplazar href="#" por la URL del catálogo correspondiente.
+     =========================================================== -->
+<section class="catalogos dark" id="catalogos">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow">Catálogos</span>
+        <h2>Encontrá lo que buscás <span class="y">por categoría.</span></h2>
+      </div>
+      <div class="right">
+        Descargá nuestros catálogos por rubro o consultanos por productos
+        específicos. Actualizamos precios y disponibilidad cada semana.
+      </div>
+    </div>
+
+    <div class="catalog-grid">
+      <!-- Catálogo 1 -->
+      <article class="catalog-card reveal">
+        <div class="visual">
+          <span class="corner">PDF · 12 MB</span>
+          <span class="glyph">
+            <!-- Iluminación -->
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.7 1 2.5h6c0-.8.3-1.7 1-2.5A6 6 0 0 0 12 3z"/>
+            </svg>
+          </span>
+        </div>
+        <div class="body">
+          <h3>Iluminación</h3>
+          <div class="meta">120+ productos · LED, decorativa, vial</div>
+          <div class="tags"><span>Plafones</span><span>Reflectores</span><span>Tiras LED</span><span>Lámparas</span></div>
+          <a href="#" class="ver" target="_blank" rel="noopener">
+            Ver catálogo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Catálogo 2 -->
+      <article class="catalog-card reveal" style="transition-delay:.05s;">
+        <div class="visual">
+          <span class="corner">PDF · 8 MB</span>
+          <span class="glyph">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M3 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/>
+              <circle cx="3" cy="12" r="1.5" fill="currentColor"/>
+              <circle cx="21" cy="12" r="1.5" fill="currentColor"/>
+            </svg>
+          </span>
+        </div>
+        <div class="body">
+          <h3>Cableado</h3>
+          <div class="meta">Conductores, tableros, conectividad</div>
+          <div class="tags"><span>Unipolar</span><span>Taller</span><span>Subterráneo</span><span>UTP</span></div>
+          <a href="#" class="ver" target="_blank" rel="noopener">
+            Ver catálogo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Catálogo 3 -->
+      <article class="catalog-card reveal" style="transition-delay:.1s;">
+        <div class="visual">
+          <span class="corner">PDF · 6 MB</span>
+          <span class="glyph">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="4" y="3" width="16" height="18" rx="1.5"/>
+              <path d="M8 7h8M8 11h8M8 15h5"/>
+              <circle cx="17" cy="15" r="1" fill="currentColor"/>
+            </svg>
+          </span>
+        </div>
+        <div class="body">
+          <h3>Tableros</h3>
+          <div class="meta">Térmicas, disyuntores, gabinetes</div>
+          <div class="tags"><span>Bipolares</span><span>Diferenciales</span><span>Para riel DIN</span></div>
+          <a href="#" class="ver" target="_blank" rel="noopener">
+            Ver catálogo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Catálogo 4 -->
+      <article class="catalog-card reveal" style="transition-delay:.15s;">
+        <div class="visual">
+          <span class="corner">PDF · 10 MB</span>
+          <span class="glyph">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="4" y="4" width="6" height="16" rx="1"/>
+              <rect x="14" y="4" width="6" height="16" rx="1"/>
+              <circle cx="7" cy="9" r=".8" fill="currentColor"/>
+              <circle cx="7" cy="14" r=".8" fill="currentColor"/>
+              <circle cx="17" cy="9" r=".8" fill="currentColor"/>
+              <circle cx="17" cy="14" r=".8" fill="currentColor"/>
+            </svg>
+          </span>
+        </div>
+        <div class="body">
+          <h3>Llaves y Tomas</h3>
+          <div class="meta">Líneas Mónaco, Siglo XXII, Plus</div>
+          <div class="tags"><span>Cambre</span><span>Macroled</span><span>Vivanco</span></div>
+          <a href="#" class="ver" target="_blank" rel="noopener">
+            Ver catálogo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Catálogo 5 -->
+      <article class="catalog-card reveal" style="transition-delay:.2s;">
+        <div class="visual">
+          <span class="corner">PDF · 5 MB</span>
+          <span class="glyph">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="3" y="6" width="18" height="12" rx="1.5"/>
+              <path d="M3 10h18M7 14h2M11 14h6"/>
+            </svg>
+          </span>
+        </div>
+        <div class="body">
+          <h3>Automatización</h3>
+          <div class="meta">Domótica, sensores, control</div>
+          <div class="tags"><span>Smart</span><span>Sensores</span><span>Reguladores</span></div>
+          <a href="#" class="ver" target="_blank" rel="noopener">
+            Ver catálogo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Catálogo 6 -->
+      <article class="catalog-card reveal" style="transition-delay:.25s;">
+        <div class="visual">
+          <span class="corner">PDF · 7 MB</span>
+          <span class="glyph">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M14 3l-2 4-2-4M5 7h14l-1 12H6L5 7zM9 11v5M15 11v5M12 11v5"/>
+            </svg>
+          </span>
+        </div>
+        <div class="body">
+          <h3>Herramientas</h3>
+          <div class="meta">Manuales y eléctricas para el oficio</div>
+          <div class="tags"><span>Pelacables</span><span>Multímetros</span><span>Crimpadoras</span></div>
+          <a href="#" class="ver" target="_blank" rel="noopener">
+            Ver catálogo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     5. PRESUPUESTO + MAYORISTAS (forma anclada en #presupuesto y
+     #mayoristas para los links del nav)
+     =========================================================== -->
+<section class="quote" id="presupuesto">
+  <div class="container">
+    <div class="quote-grid" id="mayoristas">
+      <div class="left reveal">
+        <span class="eyebrow dark">Presupuestos</span>
+        <h2>Pedí precios<br>en minutos.</h2>
+        <p>
+          Cargá tu lista o detallá lo que necesitás. Te respondemos por email o
+          WhatsApp con stock confirmado y precio según canal — mayorista o
+          minorista.
+        </p>
+        <ul class="quote-bullets">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            Respuesta dentro del horario comercial.
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            Mayoristas: lista oficial y descuentos por volumen.
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            Minoristas: asesoramiento técnico sin compromiso.
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            Adjuntá tu lista en Excel, PDF o foto.
+          </li>
+        </ul>
+      </div>
+
+      <!-- FORMULARIO
+           PARA EDITAR: cambiar action por endpoint real (Formspree,
+           backend propio, etc.). El JS de abajo intercepta el submit
+           y muestra el mensaje de éxito. -->
+      <form class="reveal" id="quoteForm" action="#" method="post" novalidate>
+        <h3>Solicitar presupuesto</h3>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-nombre">Nombre y apellido *</label>
+            <input id="f-nombre" name="nombre" type="text" required placeholder="Juan Pérez">
+          </div>
+          <div class="field">
+            <label for="f-empresa">Empresa <span style="opacity:.5;">(opcional)</span></label>
+            <input id="f-empresa" name="empresa" type="text" placeholder="Tu razón social">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">Email *</label>
+            <input id="f-email" name="email" type="email" required placeholder="vos@email.com">
+          </div>
+          <div class="field">
+            <label for="f-tel">Teléfono / WhatsApp *</label>
+            <input id="f-tel" name="telefono" type="tel" required placeholder="11 6229-6842">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Tipo de cliente *</label>
+          <div class="client-type">
+            <label>
+              <input type="radio" name="tipo" value="mayorista" checked>
+              <span class="dot-radio"></span>
+              Mayorista
+            </label>
+            <label>
+              <input type="radio" name="tipo" value="minorista">
+              <span class="dot-radio"></span>
+              Minorista
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-detalle">Detalle del pedido *</label>
+          <textarea id="f-detalle" name="detalle" required placeholder="Listame productos, cantidades y línea/marca si la conocés."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="f-archivo">Adjuntar lista <span style="opacity:.5;">(opcional)</span></label>
+          <label class="file-drop" for="f-archivo">
+            <span id="fileLabel">📎 Subí Excel, PDF o foto · hasta 10 MB</span>
+            <input id="f-archivo" name="archivo" type="file" accept=".xls,.xlsx,.pdf,.jpg,.jpeg,.png" hidden>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar pedido</button>
+        <p class="form-note">Te respondemos a la brevedad por email o WhatsApp.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     6. NOSOTROS EN REDES
+     =========================================================== -->
+<section class="social">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow dark">Nosotros en redes</span>
+        <h2>Lo último de <span class="y">@battezzati.mei</span></h2>
+      </div>
+      <div class="right">
+        Capacitaciones, novedades de marca y los productos que están llegando.
+        Seguinos para enterarte primero.
+      </div>
+    </div>
+
+    <!-- PARA EDITAR: estos posts son las publicaciones reales adjuntadas.
+         Reemplazar src y los textos cuando salgan publicaciones nuevas, o
+         conectar un widget de Instagram (ej. EmbedSocial). -->
+    <div class="social-grid">
+      <a class="social-card reveal" href="https://instagram.com/battezzati.mei" target="_blank" rel="noopener">
+        <img src="assets/post-capacitacion.png" alt="Inauguramos nuestra Academia Eléctrica">
+        <div class="overlay">
+          <div class="net">Instagram</div>
+          <div class="txt">Inauguramos la Academia Eléctrica Battezzati.</div>
+        </div>
+      </a>
+      <a class="social-card reveal" style="transition-delay:.05s;" href="https://instagram.com/battezzati.mei" target="_blank" rel="noopener">
+        <img src="assets/post-monaco.png" alt="Teclas línea Mónaco — Macroled">
+        <div class="overlay">
+          <div class="net">Instagram</div>
+          <div class="txt">Novedad: Teclas línea Mónaco · Macroled.</div>
+        </div>
+      </a>
+      <a class="social-card reveal" style="transition-delay:.1s;" href="https://instagram.com/battezzati.mei" target="_blank" rel="noopener">
+        <img src="assets/post-leuk.png" alt="Riel Barral LED — Leuk">
+        <div class="overlay">
+          <div class="net">Instagram</div>
+          <div class="txt">HOKA 3 EF · Riel Barral LED — Leuk.</div>
+        </div>
+      </a>
+      <a class="social-card reveal" style="transition-delay:.15s;" href="https://facebook.com/battezzati" target="_blank" rel="noopener">
+        <img src="assets/portada-facebook.png" alt="Sucursal Battezzati">
+        <div class="overlay">
+          <div class="net">Facebook</div>
+          <div class="txt">Showroom y sucursal Battezzati.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="social-cta">
+      <a class="btn btn-dark" href="https://instagram.com/battezzati.mei" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+        Seguinos en Instagram
+      </a>
+      <a class="btn btn-outline-dark" href="https://facebook.com/battezzati" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.3-3H13V9c0-.9.3-1.5 1.6-1.5H16V5l-2.5-.1c-2.5 0-3.5 1.3-3.5 3.5V11H8v3h2v8h3z"/></svg>
+        Seguinos en Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     7. CONTACTO Y UBICACIÓN
+     PARA EDITAR: dirección real en los <p> y reemplazar el src
+     del iframe del mapa con el embed real de Google Maps.
+     =========================================================== -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow dark">Contacto y ubicación</span>
+        <h2>Pasá por el local<br>o <span class="y">escribinos.</span></h2>
+      </div>
+      <div class="right">
+        Dos canales, una sola atención. Vení al showroom, llamanos o mandá un
+        WhatsApp — respondemos rápido en horario comercial.
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <!-- Mayorista -->
+        <div class="info-card dark">
+          <span class="channel-tag">Canal mayorista</span>
+          <h3>Comercios y empresas</h3>
+          <div class="row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92V21a1 1 0 0 1-1.1 1A19 19 0 0 1 2 4.1 1 1 0 0 1 3 3h4.1a1 1 0 0 1 1 .8l1 4a1 1 0 0 1-.3 1L7 10.5a16 16 0 0 0 6.5 6.5l1.7-1.7a1 1 0 0 1 1-.3l4 1a1 1 0 0 1 .8 1z"/></svg>
+            <a href="tel:+541154328957">(011) 5432-8957</a>
+          </div>
+          <div class="row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:battezzatimei@gmail.com">battezzatimei@gmail.com</a>
+          </div>
+          <div class="row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>
+            <a href="https://wa.me/5491162296842" target="_blank" rel="noopener">WhatsApp 11 6229-6842</a>
+          </div>
+          <div style="margin-top:14px;font-size:13px;color:var(--gray-200);line-height:1.5;">
+            Cuenta corriente, lista oficial mayorista y entregas coordinadas.
+          </div>
+        </div>
+
+        <!-- Minorista -->
+        <div class="info-card">
+          <span class="channel-tag">Canal minorista</span>
+          <h3>Particulares y obra</h3>
+          <div class="row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92V21a1 1 0 0 1-1.1 1A19 19 0 0 1 2 4.1 1 1 0 0 1 3 3h4.1a1 1 0 0 1 1 .8l1 4a1 1 0 0 1-.3 1L7 10.5a16 16 0 0 0 6.5 6.5l1.7-1.7a1 1 0 0 1 1-.3l4 1a1 1 0 0 1 .8 1z"/></svg>
+            <a href="tel:+541154328957">(011) 5432-8957</a>
+          </div>
+          <div class="row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:battezzatimei@gmail.com">battezzatimei@gmail.com</a>
+          </div>
+          <div class="row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>
+            <a href="https://wa.me/5491162296842" target="_blank" rel="noopener">WhatsApp 11 6229-6842</a>
+          </div>
+          <div style="margin-top:14px;font-size:13px;color:var(--gray-600);line-height:1.5;">
+            Atención en local, asesoramiento técnico y todos los medios de pago.
+          </div>
+        </div>
+
+        <!-- Dirección + horarios -->
+        <div class="info-card full">
+          <h3>Showroom y depósito</h3>
+          <div class="row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>
+              <strong>Battezzati Materiales Eléctricos</strong><br>
+              <span style="color:var(--gray-600);">Cargar dirección · Buenos Aires, Argentina</span>
+            </span>
+          </div>
+          <div class="row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span>
+              Lunes a Viernes <strong>8:00 a 17:00</strong><br>
+              Sábados <strong>9:00 a 13:00</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAPA: reemplazar src por el embed real de Google Maps -->
+      <div class="contact-map reveal">
+        <div class="map-tag">Cómo llegar</div>
+        <iframe
+          title="Ubicación Battezzati"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52580.41!2d-58.4438!3d-34.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac630f04469%3A0x6e44a1cc1ed6101a!2sBuenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     FOOTER
+     =========================================================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="brand-block">
+        <img src="assets/wallpaper-negro.png" alt="Battezzati" style="object-fit:contain;object-position:left;">
+        <p>Materiales eléctricos al por mayor y por menor. Marcas líderes, stock permanente y atención profesional para electricistas, comercios y obras.</p>
+        <div class="socials">
+          <a href="https://instagram.com/battezzati.mei" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+          </a>
+          <a href="https://facebook.com/battezzati" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.3-3H13V9c0-.9.3-1.5 1.6-1.5H16V5l-2.5-.1c-2.5 0-3.5 1.3-3.5 3.5V11H8v3h2v8h3z"/></svg>
+          </a>
+          <a href="https://wa.me/5491162296842" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sitio</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#marcas">Marcas</a></li>
+          <li><a href="#catalogos">Catálogos</a></li>
+          <li><a href="#mayoristas">Mayoristas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Catálogos</h4>
+        <ul>
+          <li><a href="#catalogos">Iluminación</a></li>
+          <li><a href="#catalogos">Cableado</a></li>
+          <li><a href="#catalogos">Tableros</a></li>
+          <li><a href="#catalogos">Llaves y Tomas</a></li>
+          <li><a href="#catalogos">Automatización</a></li>
+          <li><a href="#catalogos">Herramientas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+541154328957">(011) 5432-8957</a></li>
+          <li><a href="https://wa.me/5491162296842" target="_blank" rel="noopener">WhatsApp 11 6229-6842</a></li>
+          <li><a href="mailto:battezzatimei@gmail.com">battezzatimei@gmail.com</a></li>
+          <li>L a V · 8 a 17</li>
+          <li>Sáb · 9 a 13</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Battezzati Materiales Eléctricos. Todos los derechos reservados.</span>
+      <span>Diseño y desarrollo · sitio institucional</span>
+    </div>
+  </div>
+
+  <!-- Detalle inferior amarillo -->
+  <div class="footer-yellow-strip">
+    <div class="container">
+      <div class="marquee-row">
+        <span>⚡ Stock permanente</span>
+        <span>★ Marcas líderes</span>
+        <span>↳ Mayorista + Minorista</span>
+      </div>
+      <div>Envíos a todo el país</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===========================================================
+     WHATSAPP FLOTANTE
+     PARA EDITAR: cambiar el número y el mensaje pre-llenado.
+     =========================================================== -->
+<a class="wa-float" href="https://wa.me/5491162296842?text=Hola%20Battezzati%2C%20quer%C3%ADa%20consultar..." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.3 5.2 4.6 2.6 1 3.1.9 3.7.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.2.2-1.4-.1-.2-.3-.3-.5-.4z M12 2A10 10 0 0 0 3.4 17l-1.3 4.7L7 20.4A10 10 0 1 0 12 2z"/>
+  </svg>
+</a>
+
+<!-- ===========================================================
+     JS — todo embebido. Sin frameworks.
+     =========================================================== -->
+<script>
+/* JS habilitado: marcamos en root para activar fade-in.
+   Si JS está deshabilitado, los .reveal quedan visibles por defecto. */
+document.documentElement.classList.add('js-reveal');
+
+/* --------------------------------------------------------------
+   1. Header: sombra al hacer scroll
+   -------------------------------------------------------------- */
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 8);
+});
+
+/* --------------------------------------------------------------
+   2. Drawer mobile
+   -------------------------------------------------------------- */
+const toggle = document.getElementById('menuToggle');
+const drawer = document.getElementById('mobileDrawer');
+toggle.addEventListener('click', () => drawer.classList.toggle('open'));
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+
+/* --------------------------------------------------------------
+   3. Active link en el nav según scroll
+   -------------------------------------------------------------- */
+const sections = ['inicio','productos','marcas','catalogos','mayoristas','contacto']
+  .map(id => document.getElementById(id))
+  .filter(Boolean);
+const navLinks = document.querySelectorAll('.nav-main a');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+    }
+  });
+}, { rootMargin: '-30% 0px -65% 0px' });
+sections.forEach(s => navObserver.observe(s));
+
+/* --------------------------------------------------------------
+   4. Reveal on scroll — animación sutil
+   -------------------------------------------------------------- */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05 });
+/* Hacer visibles inmediatamente las que ya están en viewport al cargar */
+document.querySelectorAll('.reveal').forEach(el => {
+  const r = el.getBoundingClientRect();
+  if (r.top < window.innerHeight && r.bottom > 0) {
+    requestAnimationFrame(() => el.classList.add('visible'));
+  } else {
+    revealObserver.observe(el);
+  }
+});
+
+/* --------------------------------------------------------------
+   5. Stats animados (count-up cuando entran en viewport)
+   -------------------------------------------------------------- */
+function animateCount(el, target) {
+  const dur = 1400, start = performance.now();
+  const isPct = String(target).endsWith('%');
+  const num = parseInt(target, 10);
+  function tick(t) {
+    const p = Math.min(1, (t - start) / dur);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const v = Math.round(num * eased);
+    el.textContent = (num >= 1000 ? v.toLocaleString('es-AR') : v) + (isPct ? '%' : (num >= 100 && num < 1000 ? '+' : ''));
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const target = e.target.dataset.count;
+      animateCount(e.target, target);
+      statsObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => statsObserver.observe(el));
+
+/* --------------------------------------------------------------
+   6. Form submit (placeholder — reemplazar por endpoint real)
+   -------------------------------------------------------------- */
+const form = document.getElementById('quoteForm');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('.btn-submit');
+  const original = btn.textContent;
+  btn.textContent = 'Enviando…';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = '✓ ¡Recibido! Te respondemos pronto';
+    btn.style.background = '#22C55E';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+      form.reset();
+      document.getElementById('fileLabel').textContent = '📎 Subí Excel, PDF o foto · hasta 10 MB';
+    }, 2800);
+  }, 900);
+});
+
+/* Mostrar nombre de archivo elegido */
+const fileInput = document.getElementById('f-archivo');
+fileInput.addEventListener('change', () => {
+  const lbl = document.getElementById('fileLabel');
+  lbl.textContent = fileInput.files.length ? '📎 ' + fileInput.files[0].name : '📎 Subí Excel, PDF o foto · hasta 10 MB';
+});
+
+/* --------------------------------------------------------------
+   7. Smooth scroll para los anchors (con offset por header fijo)
+   -------------------------------------------------------------- */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
