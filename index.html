@@ -60,10 +60,10 @@
 
     <nav class="nav-main" aria-label="Principal">
       <a href="#inicio" class="active">Inicio</a>
-      <a href="#productos">Productos</a>
-      <a href="#marcas">Marcas</a>
+      <a href="#empresa">Empresa</a>
       <a href="#catalogos">Catálogos</a>
-      <a href="#mayoristas">Mayoristas</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#presupuesto">Presupuesto</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
@@ -78,10 +78,10 @@
   <!-- Drawer mobile -->
   <div class="mobile-drawer" id="mobileDrawer">
     <a href="#inicio">Inicio</a>
-    <a href="#productos">Productos</a>
-    <a href="#marcas">Marcas</a>
+    <a href="#empresa">Empresa</a>
     <a href="#catalogos">Catálogos</a>
-    <a href="#mayoristas">Mayoristas</a>
+    <a href="#marcas">Marcas</a>
+    <a href="#presupuesto">Presupuesto</a>
     <a href="#contacto">Contacto</a>
     <a href="#presupuesto" class="btn btn-primary">Pedí tu presupuesto</a>
   </div>
@@ -156,7 +156,7 @@
 <!-- ===========================================================
      2. POR QUÉ ELEGIRNOS
      =========================================================== -->
-<section class="why" id="productos">
+<section class="why" id="empresa">
   <div class="container">
     <div class="section-head">
       <div class="left">
@@ -404,8 +404,9 @@
 </section>
 
 <!-- ===========================================================
-     5. PRESUPUESTO + MAYORISTAS (forma anclada en #presupuesto y
-     #mayoristas para los links del nav)
+     5. PRESUPUESTO
+     El id="mayoristas" del .quote-grid se mantiene como anchor
+     legacy por si quedan links externos (campanas, redes, etc.).
      =========================================================== -->
 <section class="quote" id="presupuesto">
   <div class="container">
@@ -705,10 +706,10 @@
         <h4>Sitio</h4>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#marcas">Marcas</a></li>
+          <li><a href="#empresa">Empresa</a></li>
           <li><a href="#catalogos">Catálogos</a></li>
-          <li><a href="#mayoristas">Mayoristas</a></li>
+          <li><a href="#marcas">Marcas</a></li>
+          <li><a href="#presupuesto">Presupuesto</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -793,7 +794,7 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => draw
 /* --------------------------------------------------------------
    3. Active link en el nav según scroll
    -------------------------------------------------------------- */
-const sections = ['inicio','productos','marcas','catalogos','mayoristas','contacto']
+const sections = ['inicio','empresa','catalogos','marcas','presupuesto','contacto']
   .map(id => document.getElementById(id))
   .filter(Boolean);
 const navLinks = document.querySelectorAll('.nav-main a');
