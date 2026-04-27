@@ -393,9 +393,12 @@ ul { list-style: none; }
   border: 1px solid #2a2a2a;
   border-radius: 6px;
   overflow: hidden;
-  background-image: url("assets/portada-facebook.png");
+  /* Foto del local: panoramica (~2.65:1) sobre frame 4/5 vertical.
+     Con position 50% 28% el crop muestra el cartel BATTEZZATI con la
+     lampita en el tercio superior y el frente vidriado debajo. */
+  background-image: url("assets/local-frente.jpg");
   background-size: cover;
-  background-position: center 35%;
+  background-position: 50% 28%;
 }
 .hero-visual .frame::after {
   content: "";
