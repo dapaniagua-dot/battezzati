@@ -648,15 +648,26 @@
         </div>
       </div>
 
-      <!-- MAPA: reemplazar src por el embed real de Google Maps -->
-      <div class="contact-map reveal">
+      <!-- MAPA: placeholder honesto hasta cargar la dirección real.
+           Cuando este la direccion definitiva: pegar el embed de
+           Google Maps en lugar de este bloque y restaurar la clase
+           .contact-map original con el iframe (ver historia git). -->
+      <div class="contact-map contact-map--pending reveal">
         <div class="map-tag">Cómo llegar</div>
-        <iframe
-          title="Ubicación Battezzati"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52580.41!2d-58.4438!3d-34.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac630f04469%3A0x6e44a1cc1ed6101a!2sBuenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen></iframe>
+        <div class="map-pending-inner">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <h3>Próximamente: ubicación en mapa</h3>
+          <p>Estamos cargando la dirección exacta del showroom. Mientras tanto, escribinos por WhatsApp y te pasamos cómo llegar.</p>
+          <a class="btn btn-primary" href="https://wa.me/5491162296842?text=Hola%20Battezzati%2C%20%C2%BFc%C3%B3mo%20llego%20al%20local%3F" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.3 5.2 4.6 2.6 1 3.1.9 3.7.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.2.2-1.4-.1-.2-.3-.3-.5-.4z M12 2A10 10 0 0 0 3.4 17l-1.3 4.7L7 20.4A10 10 0 1 0 12 2z"/>
+            </svg>
+            Pedir cómo llegar
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -979,6 +979,47 @@ section.dark .section-head .right { color: var(--gray-200); }
   border: 0;
   filter: grayscale(0.3) contrast(1.1);
 }
+
+/* Placeholder honesto mientras no hay direccion real */
+.contact-map--pending {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,214,10,.08), transparent 55%),
+    var(--black);
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+    radial-gradient(circle at 30% 30%, rgba(255,214,10,.08), transparent 55%);
+  background-size: 32px 32px, 32px 32px, 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+}
+.map-pending-inner {
+  max-width: 360px;
+  text-align: center;
+  color: var(--white);
+}
+.map-pending-inner svg {
+  color: var(--yellow);
+  margin: 0 auto 20px;
+  display: block;
+}
+.map-pending-inner h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.map-pending-inner p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--gray-200);
+  margin-bottom: 24px;
+}
 .contact-map .map-tag {
   position: absolute;
   top: 16px; left: 16px;
