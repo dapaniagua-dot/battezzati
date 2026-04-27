@@ -1118,13 +1118,27 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   z-index: 90;
   background: #25D366;
   color: white;
-  width: 60px; height: 60px;
+  width: 56px; height: 56px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 8px 24px rgba(37,211,102,.45);
-  transition: transform .2s ease;
+  /* Sombra mas sutil — antes competia con los CTAs amarillos */
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.25),
+    0 2px 4px rgba(37,211,102,.25);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-.wa-float:hover { transform: scale(1.08); }
+.wa-float:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.3),
+    0 3px 6px rgba(37,211,102,.35);
+}
+.wa-float:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+/* Ripple finito: 3 pulsos al cargar y para. Antes era infinito y
+   consumia ciclos de paint constantes. */
 .wa-float::before {
   content: "";
   position: absolute;
@@ -1132,11 +1146,17 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   border-radius: 50%;
   background: #25D366;
   z-index: -1;
-  animation: ripple 2s infinite;
+  animation: ripple 2.2s ease-out 3;
 }
 @keyframes ripple {
-  0% { transform: scale(1); opacity: .6; }
-  100% { transform: scale(1.6); opacity: 0; }
+  0% { transform: scale(1); opacity: .5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Mobile: subir el boton para que no choque con el form ni el footer */
+@media (max-width: 720px) {
+  .wa-float { right: 16px; bottom: 88px; width: 52px; height: 52px; }
+  .wa-float svg { width: 26px; height: 26px; }
 }
 
 /* ============================================================
@@ -1220,3 +1240,21 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
 }
 .mobile-drawer a:hover { color: var(--yellow); }
 .mobile-drawer .btn { width: 100%; margin-top: 16px; }
+
+/* ============================================================
+   ACCESIBILIDAD: respeta usuarios con prefer-reduced-motion
+   (sensibilidad al movimiento, vestibular disorders, etc.)
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto; }
+  /* Las reveal sections se muestran de una, sin transformacion */
+  .js-reveal .reveal { opacity: 1 !important; transform: none !important; }
+}
