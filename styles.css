@@ -541,7 +541,7 @@ section.dark .section-head .right { color: var(--gray-200); }
 .why { background: var(--white); }
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border-top: 2px solid var(--black);
   border-left: 2px solid var(--black);
@@ -554,7 +554,54 @@ section.dark .section-head .right { color: var(--gray-200); }
   transition: background .25s ease, color .25s ease;
   position: relative;
 }
-.why-card:hover { background: var(--yellow); }
+.why-card:not(.why-card--featured):hover { background: var(--yellow); }
+
+/* Card destacada: rompe la simetria — Stock es lo mas importante
+   de Battezzati. Ocupa toda la fila superior, layout horizontal con
+   icono a la izquierda, titulo+texto al medio, label "01 / Stock"
+   a la derecha como contador. Fondo amarillo siempre. */
+.why-card--featured {
+  grid-column: 1 / -1;
+  background: var(--yellow);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 36px;
+  align-items: center;
+  padding: 40px 44px;
+}
+.why-card--featured .icon {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background: var(--black);
+  color: var(--yellow);
+  width: 72px;
+  height: 72px;
+  margin-bottom: 0;
+}
+.why-card--featured h3 {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 36px;
+  align-self: end;
+  margin-bottom: 6px;
+}
+.why-card--featured p {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 16px;
+  color: var(--black);
+  max-width: 640px;
+  align-self: start;
+}
+.why-card--featured .num {
+  grid-column: 3;
+  grid-row: 1;
+  margin-bottom: 0;
+  color: var(--black);
+  opacity: 0.5;
+  align-self: start;
+}
 .why-card .num {
   font-family: var(--font-display);
   font-size: 14px;
@@ -1258,7 +1305,19 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   .hero-grid { grid-template-columns: 1fr; gap: 48px; padding: 64px 0 80px; }
   .hero-visual { aspect-ratio: 16/10; max-height: 420px; }
   .hero-stats .container { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  /* En tablet la featured colapsa a layout vertical (como las normales)
+     porque a 700-1023px el horizontal queda apretado. Mantiene fondo amarillo. */
+  .why-card--featured {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    padding: 28px 24px 32px;
+    column-gap: 0;
+    row-gap: 12px;
+  }
+  .why-card--featured .icon { grid-column: 1; grid-row: 1; }
+  .why-card--featured .num  { grid-column: 1; grid-row: 2; align-self: start; }
+  .why-card--featured h3    { grid-column: 1; grid-row: 3; font-size: 28px; align-self: start; }
+  .why-card--featured p     { grid-column: 1; grid-row: 4; }
   .brand-grid { grid-template-columns: repeat(3, 1fr); }
   .catalog-grid { grid-template-columns: repeat(2, 1fr); }
   .quote-grid { grid-template-columns: 1fr; gap: 32px; }
