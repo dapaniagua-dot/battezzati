@@ -18,6 +18,9 @@
 </head>
 <body>
 
+<!-- Skip link para teclado / lectores de pantalla -->
+<a href="#inicio" class="skip-link">Saltar al contenido</a>
+
 <!-- ===========================================================
      TOP STRIP — info útil arriba del header
      PARA EDITAR: cambiar horarios, teléfonos y email aquí
@@ -777,6 +780,18 @@
 /* JS habilitado: marcamos en root para activar fade-in.
    Si JS está deshabilitado, los .reveal quedan visibles por defecto. */
 document.documentElement.classList.add('js-reveal');
+
+/* Accesibilidad: todos los SVG inline de este sitio son decorativos
+   (los iconos que llevan info estan dentro de elementos con aria-label
+   propio: WhatsApp float, footer socials, etc.). Los marcamos como
+   aria-hidden y focusable=false para que los lectores de pantalla
+   no los anuncien y el tab no los enfoque. */
+document.querySelectorAll('svg').forEach(svg => {
+  if (!svg.hasAttribute('aria-label') && !svg.hasAttribute('role')) {
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+  }
+});
 
 /* --------------------------------------------------------------
    1. Header: sombra al hacer scroll
