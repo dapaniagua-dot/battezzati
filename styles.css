@@ -232,7 +232,7 @@ ul { list-style: none; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   color: var(--white);
   line-height: 1;
 }
@@ -242,8 +242,8 @@ ul { list-style: none; }
      (Chrome Android, Samsung Internet) que cortaban la parte superior
      del circulo. Un block con dimensiones fijas es 100% predecible. */
   display: inline-block;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
   border-radius: 50%;
   background-image: url("assets/logo-ig.png");
@@ -266,12 +266,12 @@ ul { list-style: none; }
 .brand-wordmark {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 .brand-name {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 26px;
+  font-size: 34px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--white);
@@ -281,16 +281,17 @@ ul { list-style: none; }
 .brand-tagline {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 10.5px;
-  letter-spacing: 0.28em;
+  font-size: 13px;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gray-200);
   line-height: 1;
 }
 .brand:hover .brand-name { color: var(--yellow); }
 
-.brand-footer .brand-mark { height: 56px; width: 56px; }
-.brand-footer .brand-name { font-size: 28px; }
+.brand-footer .brand-mark { height: 68px; width: 68px; }
+.brand-footer .brand-name { font-size: 38px; }
+.brand-footer .brand-tagline { font-size: 14px; }
 .brand-footer { margin-bottom: 24px; }
 
 .nav-main {
@@ -468,12 +469,13 @@ ul { list-style: none; }
   border: 1px solid var(--border-faint);
   border-radius: 6px;
   overflow: hidden;
-  /* Foto del local: panoramica (~2.65:1) sobre frame 4/5 vertical.
-     Con position 50% 28% el crop muestra el cartel BATTEZZATI con la
-     lampita en el tercio superior y el frente vidriado debajo. */
-  background-image: url("assets/local-frente.jpg");
+  /* Foto del local: vertical (~4:5) que calza con el frame del hero
+     sin necesidad de cropear los costados. background-position center
+     muestra el local entero: cartel arriba, vidriera al medio, cesped
+     y entrada abajo. */
+  background-image: url("assets/hero-local.jpg");
   background-size: cover;
-  background-position: 50% 28%;
+  background-position: center;
 }
 .hero-visual .frame::after {
   content: "";
@@ -1356,7 +1358,7 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
 
 @media (max-width: 900px) {
   .top-strip { display: none; }
-  :root { --header-h: 70px; }
+  :root { --header-h: 76px; }
   .nav-main, .nav-cta .btn { display: none; }
   .menu-toggle { display: inline-flex; }
   section { padding: 64px 0; }
@@ -1373,11 +1375,12 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   .social-grid { grid-template-columns: 1fr 1fr; }
   .section-head { flex-direction: column; align-items: flex-start; }
   .hero-stats .stat .num { font-size: 36px; }
-  /* En mobile el header es chico: ocultamos el tagline para ganar respiro */
+  /* En mobile el header sigue acomodando logo grande pero el tagline
+     se oculta para que el wordmark no se aprete contra la hamburguesa. */
   .site-header .brand-tagline { display: none; }
-  .site-header .brand-mark { height: 40px; width: 40px; }
-  .site-header .brand-name { font-size: 22px; }
-  .site-header .brand { gap: 10px; }
+  .site-header .brand-mark { height: 48px; width: 48px; }
+  .site-header .brand-name { font-size: 28px; }
+  .site-header .brand { gap: 12px; }
 }
 
 /* Mobile menu drawer */
