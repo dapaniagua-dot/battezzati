@@ -1357,7 +1357,7 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .top-strip { display: none; }
   :root { --header-h: 70px; }
   .nav-main, .nav-cta .btn { display: none; }
