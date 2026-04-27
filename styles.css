@@ -41,6 +41,7 @@
 
   /* Estados / utilidades */
   --success: #22C55E;
+  --error: #EF4444;
   --whatsapp: #25D366;
 
   /* Tipografía */
@@ -908,6 +909,17 @@ section.dark .section-head .right { color: var(--gray-200); }
   transition: transform .15s, background .2s;
 }
 .btn-submit:hover { background: var(--white); transform: translateY(-2px); }
+.btn-submit--success,
+.btn-submit--success:hover {
+  background: var(--success);
+  color: var(--white);
+  transform: none;
+}
+/* Estilo de inputs invalidos cuando el browser dispara la validacion */
+.field input:invalid:not(:placeholder-shown),
+.field textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--error);
+}
 .form-note { font-size: 12.5px; color: var(--gray-300); text-align: center; margin-top: 14px; }
 
 /* ============================================================
