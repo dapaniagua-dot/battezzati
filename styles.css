@@ -183,8 +183,9 @@ ul { list-style: none; }
   height: 36px;
 }
 .top-strip .strip-left { display: flex; gap: 24px; }
-.top-strip .strip-left span { display: inline-flex; align-items: center; gap: 6px; }
-.top-strip .strip-left svg { color: var(--yellow); }
+.top-strip .strip-left span,
+.top-strip .strip-right a { display: inline-flex; align-items: center; gap: 6px; }
+.top-strip svg { color: var(--yellow); }
 .top-strip .strip-right { display: flex; gap: 16px; align-items: center; }
 .top-strip .strip-right a:hover { color: var(--yellow); }
 
@@ -369,7 +370,9 @@ ul { list-style: none; }
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--yellow);
   box-shadow: 0 0 8px var(--yellow);
-  animation: pulse 2s infinite;
+  /* Igual patron que el WhatsApp ripple y el lamp-glow:
+     pulsa 3 veces al cargar y se queda quieto. */
+  animation: pulse 2s ease-in-out 3;
 }
 @keyframes pulse {
   0%, 100% { opacity: 1; }
@@ -671,7 +674,7 @@ section.dark .section-head .right { color: var(--gray-200); }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-200);
+  color: var(--gray-400);
   transition: color .25s ease, transform .4s ease;
 }
 .catalog-card:hover .visual .glyph { color: var(--black); transform: scale(1.05); }
@@ -1154,12 +1157,13 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
 .footer-bottom {
   padding: 24px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 12.5px;
   color: var(--gray-300);
   letter-spacing: 0.04em;
   flex-wrap: wrap;
+  text-align: center;
   gap: 12px;
 }
 .footer-yellow-strip {
@@ -1302,6 +1306,7 @@ footer .socials a:hover { background: var(--yellow); color: var(--black); border
   padding: 16px 24px 32px;
 }
 .mobile-drawer.open { transform: translateY(0); }
+body.no-scroll { overflow: hidden; }
 .mobile-drawer a {
   display: block;
   padding: 14px 0;
